@@ -1,7 +1,17 @@
 [
     {
         "id": 1,
-        "src": "",
-        "title": ""
+        "src": "/assets/audios/Katharina_Strikkeling_Hoerbuch_Portrait",
+        "title": "Hörbuch: Portrait"
+    },
+    {
+        "id": 2,
+        "src": "/assets/audios/Katharina_Strikkeling_Hoerbuch",
+        "title": "Hörbuch"
+    },
+    {
+        "id": 3,
+        "src": "/assets/audios/Katharina_Strikkeling_Werbung",
+        "title": "Werbung"
     }
 ]

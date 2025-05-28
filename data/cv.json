@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "year": "2020",
+        "title": "Schauspielunterricht",
+        "place": "Kreativhaus Münster"
+    },
+    {
+        "id": 2,
+        "year": "2022-2023",
+        "title": "Sprecherausbildung Mediensprechen",
+        "place": "Sprechstilatelier"
+    },
+    {
+        "id": 3,
+        "year": "2024",
+        "title": "Synchronworkshop",
+        "place": "Dubbing Plus"
+    },
+    {
+        "id": 4,
+        "year": "2024",
+        "title": "Synchronworkshop",
+        "place": "Peggy Pollow"
+    },
+    {
+        "id": 5,
+        "year": "2021-2025",
+        "title": "Journalistikstudium",
+        "place": "TU Dortmund"
+    }    
+]

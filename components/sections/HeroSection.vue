@@ -7,4 +7,3 @@
         </v-img>
     </v-container>
 </template>
-

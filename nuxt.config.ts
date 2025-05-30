@@ -2,7 +2,7 @@
 import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 export default defineNuxtConfig({
   //...
-
+  components: true,
 
   build: {
     transpile: ['vuetify'],
@@ -16,6 +16,17 @@ export default defineNuxtConfig({
       })
     },
     '@nuxt/fonts',
+
+    // noch auf IONOS konfigurieren
+    ['nuxt-mail', {
+      message: {
+        to: 'foo@bar.de',
+      },
+      smtp: {
+        host: "smtp.example.com",
+        port: 587,
+      },
+    }],
   ],
 
   css: ['~/assets/css/fonts.css'],

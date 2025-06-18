@@ -2,7 +2,7 @@
     <v-form v-model="valid" @submit.prevent="onSubmit">
         <v-container>
             <v-row>
-                <v-col cols="12" md="6">
+                <v-col cols="12" sm="6">
                     <v-text-field
                         variant="solo"
                         v-model="firstname"
@@ -11,7 +11,7 @@
                         required>       
                     </v-text-field>
                 </v-col>
-                <v-col cols="12" md="6">
+                <v-col cols="12" sm="6">
                     <v-text-field
                         variant="solo"
                         v-model="lastname"
@@ -76,14 +76,15 @@
                 },
                 value => {
                     if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) return true;
-                    return 'Bitte gebe eine gültige E-Mail-Adresse ein.'
+                    return 'Bitte gib eine gültige E-Mail-Adresse ein.'
                 }
             ],
             tel: '',
             telRules: [
                 value => {
-                    if (/(\(?([\d \-\)\–\+\/\(]+){6,}\)?([ .\-–\/]?)([\d]+))/.test(value)) return true;
-                    return 'Bitte gebe eine gültige Telefonnummer ein (freiwillig).'
+                    // true wenn Feld leer oder gültige TelNr
+                    if (value == "" || /(\(?([\d \-\)\–\+\/\(]+){6,}\)?([ .\-–\/]?)([\d]+))/.test(value)) return true;
+                    return 'Bitte gib eine gültige Telefonnummer ein (freiwillig).'
                 }
             ],
             message: '',
@@ -102,7 +103,7 @@
                             'Content-Type': 'application/json'
                         },
                         body: JSON.stringify({
-                            name: this.firstname + this.lastname,
+                            name: this.firstname + " " + this.lastname,
                             email: this.email,
                             tel: this.tel,
                             message: this.message

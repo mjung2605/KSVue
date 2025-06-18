@@ -1,5 +1,5 @@
 <template>
-    <v-form v-model="valid">
+    <v-form v-model="valid" @submit.prevent="onSubmit">
         <v-container>
             <v-row>
                 <v-col cols="12" md="6">
@@ -47,7 +47,7 @@
                     </v-textarea>
                 </v-col>
                 <v-col class="d-flex justify-end">
-                    <v-btn  color="accent" type="submit">Absenden</v-btn>
+                    <v-btn color="accent" type="submit">Absenden</v-btn>
                 </v-col>
            </v-row>
         </v-container>
@@ -65,28 +65,54 @@
             textRules: [
                 value => {
                     if (value) return true;
-                    return 'Bitte füllen Sie dieses Feld aus.';
+                    return 'Bitte fülle dieses Feld aus.';
                 }
             ],
             email: '',
             emailRules: [
                 value => {
                     if (value) return true;
-                    return 'Bitte füllen Sie dieses Feld aus.';
+                    return 'Bitte fülle dieses Feld aus.';
                 },
                 value => {
                     if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) return true;
-                    return 'Bitte geben Sie eine gültige E-Mail-Adresse ein.'
+                    return 'Bitte gebe eine gültige E-Mail-Adresse ein.'
                 }
             ],
             tel: '',
             telRules: [
                 value => {
                     if (/(\(?([\d \-\)\–\+\/\(]+){6,}\)?([ .\-–\/]?)([\d]+))/.test(value)) return true;
-                    return 'Bitte geben Sie eine gültige Telefonnummer ein (freiwillig).'
+                    return 'Bitte gebe eine gültige Telefonnummer ein (freiwillig).'
                 }
             ],
-            message: ''
-        })
+            message: '',
+            success: null
+        }),
+
+        methods: {
+            onSubmit() {
+                if(this.valid) this.sendEmail();
+            },
+            async sendEmail() {
+                const response = await fetch('/api/contact',
+                    {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            name: this.firstname + this.lastname,
+                            email: this.email,
+                            tel: this.tel,
+                            message: this.message
+                        })
+                    }
+                )
+
+                const result = await response.json();
+                this.success = result.success;
+            }
+        }
     }
 </script>

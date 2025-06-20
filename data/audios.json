@@ -1,17 +1,20 @@
 [
     {
         "id": 1,
-        "src": "/assets/audios/Katharina_Strikkeling_Hoerbuch_Portrait",
-        "title": "Hörbuch: Portrait"
+        "src": "/Katharina_Strikkeling_Hoerbuch_Portrait.mp3",
+        "title": "Hörbuch: Portrait",
+        "date": "19.06.2025"
     },
     {
         "id": 2,
-        "src": "/assets/audios/Katharina_Strikkeling_Hoerbuch",
-        "title": "Hörbuch"
+        "src": "/Katharina_Strikkeling_Hoerbuch.mp3",
+        "title": "Hörbuch",
+        "date": "19.06.2025"
     },
     {
         "id": 3,
-        "src": "/assets/audios/Katharina_Strikkeling_Werbung",
-        "title": "Werbung"
+        "src": "/Katharina_Strikkeling_Werbung.mp3",
+        "title": "Werbung",
+        "date": "19.06.2025"
     }
 ]

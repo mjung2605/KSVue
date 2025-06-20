@@ -6,8 +6,6 @@ export default defineEventHandler(async (event) => {
 
   // lädt in nuxt.config.ts assignte .env
   const config = useRuntimeConfig();
-
-  console.log(config.mailHost);
   
   // awaited Daten vom Frontend / http post body als json
   const body = await readBody(event);
@@ -23,7 +21,7 @@ export default defineEventHandler(async (event) => {
       pass: config.mailPass
     },
     tls: {
-      rejectUnauthorized: false // optional – manchmal nötig bei IONOS
+      rejectUnauthorized: false // optional, manchmal nötig bei IONOS
     }
     
   });

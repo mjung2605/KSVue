@@ -23,10 +23,19 @@ export default defineNuxtConfig({
         config.plugins.push(vuetify({ autoImport: true }))
       })
     },
-    '@nuxt/fonts'
+    '@nuxtjs/google-fonts'
   ],
 
   css: ['~/assets/css/fonts.css'],
+
+   googleFonts: {
+    families: {
+      'Source+Sans+Pro': [100, 400, 700],
+      'Playfair+Display': [400, 500, 700]
+    },
+    display: 'swap',
+    download: true, 
+  },
 
   vite: {
     vue: {

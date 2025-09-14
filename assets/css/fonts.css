@@ -19,3 +19,7 @@ h2 {
     font-size: clamp(2rem, 3vw, 2.5rem);
     font-weight: 500;
 }
+
+a {
+    color: white;
+}

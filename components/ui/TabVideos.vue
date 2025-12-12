@@ -3,7 +3,7 @@
     <v-sheet class="pa-8 d-flex flex-row justify-space-evenly align-center">
         <v-btn variant="text" @click="prev" icon="mdi-chevron-left" rounded></v-btn>
 
-        <v-window class="w-100 h-100" v-model="currentTab">
+        <v-window class="w-100 h-300" v-model="currentTab">
             <!-- v-for="(v, i) ist JS Syntax in For-Schleifen: die erste Variable repräsentiert dann den Wert, die zweite den Index, den wir für den active tab brauchen" -->
             <v-window-item
             
@@ -11,7 +11,7 @@
             :key="v.id"
             :value="i">
 
-                <iframe height="100%" width="100%" :src="v.src" ></iframe>
+                <iframe height="300px" width="100%" :src="v.src" ></iframe>
             </v-window-item>
         </v-window>
  

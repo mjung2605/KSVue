@@ -5,7 +5,11 @@
         <div style="position:relative;padding-top:0;"> <iframe src="https://www.nrwision.de/mediathek/embed/kurt-piehl-ein-pirat-im-zweiten-weltkrieg-teil-1-der-weg-in-den-widerstand-240708/" scrolling="no" frameborder="0" allowfullscreen style="position:relative;top:0;left:0;width:560px;height:410px;"></iframe> </div>
 </template>
 
+
 <script setup>
+
+    // erstmal benched
+
     import videos from "@/data/videos.json"
 
     const currentTab = ref(0);

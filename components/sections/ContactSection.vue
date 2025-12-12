@@ -5,13 +5,8 @@
             <UiHeadline text="Schreib mich an!"/>
             <UiContactForm/>
 
-
         </v-container>
-
         <UiFooter />
-
     </v-container>
-
-
 </template>
 

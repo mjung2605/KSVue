@@ -3,10 +3,10 @@
     <v-card style="background-color: rgba(var(--v-theme-background), 0.8);">
       <v-tabs v-model="tab" align-tabs="center" bg-color="background">
         <v-tab value="audios">Hörproben</v-tab>
-        <!-- 
+         
         <v-tab value="videos">Voice Over</v-tab>
-        <v-tab value="podcasts">Podcasts</v-tab>
-         -->
+        <!--<v-tab value="podcasts">Podcasts</v-tab> -->
+         
       </v-tabs>
 
       <v-card-text>
@@ -16,11 +16,11 @@
               <UiTabAudios />
             </v-tabs-window-item>
 
-            <!--
+            
             <v-tabs-window-item value="videos">
               <UiTabVideos />
             </v-tabs-window-item>
-
+            <!--
             <v-tabs-window-item value="podcasts">
               <UiTabPodcasts />
             </v-tabs-window-item>

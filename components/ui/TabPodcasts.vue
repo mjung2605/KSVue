@@ -1,26 +1,37 @@
 <template>
+    <v-sheet class="pa-8 d-flex flex-row justify-space-evenly align-center">
+        <v-btn variant="text" @click="prev" icon="mdi-chevron-left" rounded></v-btn>
 
-        <div style="position:relative;padding-top:0;"> <iframe src="https://www.nrwision.de/mediathek/embed/kurt-piehl-ein-pirat-im-zweiten-weltkrieg-teil-1-der-weg-in-den-widerstand-240708/" scrolling="no" frameborder="0" allowfullscreen style="position:relative;top:0;left:0;width:560px;height:410px;"></iframe> </div>
+        <v-window class="d-flex align-center justify-center" v-model="currentTab">
+            <!-- v-for="(v, i) ist JS Syntax in For-Schleifen: die erste Variable repräsentiert dann den Wert, die zweite den Index, den wir für den active tab brauchen" -->
+            <v-window-item
+            
+            v-for="(p, i) in podcasts"
+            :key="p.id"
+            :value="i">
+                <iframe style="border: none" height="420px" width="500px" :src="p.src" ></iframe>
+            </v-window-item>
+        </v-window>
+ 
+        <v-btn variant="text" @click="next" icon="mdi-chevron-right" rounded></v-btn>
+    </v-sheet>
 
-        <div style="position:relative;padding-top:0;"> <iframe src="https://www.nrwision.de/mediathek/embed/kurt-piehl-ein-pirat-im-zweiten-weltkrieg-teil-1-der-weg-in-den-widerstand-240708/" scrolling="no" frameborder="0" allowfullscreen style="position:relative;top:0;left:0;width:560px;height:410px;"></iframe> </div>
 </template>
 
 
 <script setup>
 
-    // erstmal benched
-
-    import videos from "@/data/videos.json"
+    import podcasts from "@/data/podcasts.json"
 
     const currentTab = ref(0);
 
     function prev() {
         if(currentTab.value > 0) currentTab.value--;
-        else if(currentTab.value === 0) currentTab.value = videos.length - 1;
+        else if(currentTab.value === 0) currentTab.value = podcasts.length - 1;
     }
 
     function next() {
-        if(currentTab.value < videos.length - 1) currentTab.value++;
-        else if(currentTab.value === videos.length - 1) currentTab.value=0;
+        if(currentTab.value < podcasts.length - 1) currentTab.value++;
+        else if(currentTab.value === podcasts.length - 1) currentTab.value=0;
     }
 </script>

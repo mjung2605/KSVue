@@ -5,7 +5,7 @@
         v-for="a in audios"
         :key="a.id">
             <UiText :text="a.title"/>
-            <UiText :text="a.date"/>
+            <!--<UiText :text="a.date"/>-->
             <audio class="w-100" :src="a.src" controls></audio>
         </v-sheet>
 

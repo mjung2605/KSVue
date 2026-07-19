@@ -1,20 +1,20 @@
 [
     {
         "id": 1,
-        "src": "/Katharina_Strikkeling_Hoerbuch_Portrait.mp3",
-        "title": "Hörbuch: Portrait",
-        "date": "19.06.2025"
-    },
-    {
-        "id": 2,
         "src": "/Katharina_Strikkeling_Hoerbuch.mp3",
         "title": "Hörbuch",
         "date": "19.06.2025"
     },
     {
-        "id": 3,
-        "src": "/Katharina_Strikkeling_Werbung.mp3",
-        "title": "Werbung",
+        "id": 1,
+        "src": "/Synchron-Hörprobe.mp3",
+        "title": "Synchron",
+        "date": "19.06.2025"
+    },
+    {
+        "id": 1,
+        "src": "/Voice-Over-Ausschnitte_Strikkeling.mp3",
+        "title": "Voice-Over Ausschnitte",
         "date": "19.06.2025"
     }
 ]

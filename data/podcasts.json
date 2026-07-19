@@ -2,7 +2,11 @@
     {
         "id": 1,
         "src": "https://www.nrwision.de/mediathek/embed/kurt-piehl-ein-pirat-im-zweiten-weltkrieg-teil-1-der-weg-in-den-widerstand-240708/",
-        "title": "",
-        "timestart": ""
+        "title": "Kurt Piehl - Ein Pirat im Zweiten Weltkrieg: Teil 1 - Der Weg in den Widerstand"
+    },
+    {
+        "id": 2,
+        "src": "https://open.spotify.com/embed/show/1DXxwkFROJPlCf5mYbMY63?utm_source=generator&theme=0&t=772&si=ae128a3269f64892",
+        "title": "Podcast auf Spotify: Blinder Fleck im Mittelmeer - Zyperns Migrationsproblem"
     }
 ]

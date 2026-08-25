@@ -1,18 +1,12 @@
 [
     {
-        "id": 1,
-        "src": "/Katharina_Strikkeling_Hoerbuch.mp3",
-        "title": "Hörbuch",
-        "date": "19.06.2025"
-    },
-    {
-        "id": 1,
+        "id": 2,
         "src": "/Synchron-Hörprobe.mp3",
         "title": "Synchron",
         "date": "19.06.2025"
     },
     {
-        "id": 1,
+        "id": 3,
         "src": "/Voice-Over-Ausschnitte_Strikkeling.mp3",
         "title": "Voice-Over Ausschnitte",
         "date": "19.06.2025"

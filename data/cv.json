@@ -1,5 +1,11 @@
 [
     {
+        "id": 0,
+        "year": "2026",
+        "title": "Schauspielunterricht",
+        "place": "Folkwang Musikschule Essen"
+    },
+    {
         "id": 1,
         "year": "2021-2025",
         "title": "Journalistikstudium",
